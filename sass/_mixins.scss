@@ -1,0 +1,35 @@
+
+
+@mixin button($color, $backgroun-color, $border-color) {
+    border: 1px solid $border-color;
+    font-size: 24px;
+    padding: 5px 30px;
+    border-radius: 5px;
+    transition: all .5s;
+    background-color: $backgroun-color;
+    color: $color;
+    border-radius: 5px;
+    text-decoration: none;
+    &:hover {
+        background-color: $color;
+        color: $backgroun-color;
+        border: 1px solid $main-color;
+    }
+}
+
+@mixin section-title($color, $background-color) {
+    color: $color;
+    position: relative;
+    line-height: 50px;
+    margin-right: 30px;
+    margin-bottom: 40px;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: -30px;
+        width: 15px;
+        height: 100%;
+        background-color: $background-color;
+    }
+}
